@@ -1,8 +1,7 @@
-require ("dotenv").config();
+require("dotenv").config();
 const Discord = require('discord.js')
 const client = new Discord.Client({intents: ["GUILDS", "GUILD_MESSAGES"]})
-const {token} = process.env
-client.login(token)
+client.login(process.env["TOKEN"])
 client.on("messageCreate", function (message) {
     const prefix = "lol.";
     if (message.author.bot) return
