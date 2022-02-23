@@ -15,7 +15,7 @@ client.on("messageCreate", function (message) {
         message.reply(`Pong! This message had a latency of ${timeTaken}ms.`)
     }
     if (command === "joke" && message.content.startsWith(prefix)) {
-        message.reply("the gcc")
+        message.channel.send("the gcc")
     }
     if (command === "rick" && message.content.startsWith(prefix)) {
         message.channel.send
