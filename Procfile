@@ -1,1 +1,1 @@
-worker: node discord_bot/index.js
+worker: node /app/index.js
