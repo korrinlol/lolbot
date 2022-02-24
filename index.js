@@ -29,10 +29,7 @@ client.on("messageCreate", function (message) {
         message.reply("hi omar")
     }
      */
-    if (message.content.includes("your")) {
-        message.reply("*you're")
-    }
-    if (message.mentions.has("883797094857597020")) {
-        message.reply(help)
+    if (message.content.includes("*you're") || message.content.includes("*your")) {
+        message.reply("nobody cares!")
     }
 })
