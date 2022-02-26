@@ -22,6 +22,9 @@ client.on("messageCreate", function (message) {
         message.channel.send
         ("https://tenor.com/view/rickroll-roll-rick-never-gonna-give-you-up-never-gonna-gif-22954713")
     }
+    if (command === "deez" && message.content.startsWith(prefix)) {
+        message.channel.send("nuts")
+    }
     if (command === "help" && message.content.startsWith(prefix)) {
         message.reply(help)
     }
