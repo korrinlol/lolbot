@@ -10,7 +10,7 @@ client.on("messageCreate", function (message) {
     const args = commandBody.split(' ')
     const command = args.shift().toLowerCase()
     const help = "Welcome to lolbot\nAvailable commands:\nlol.ping: returns the amount of time it took to send a " +
-        "message\n" + "lol.joke: you'll see\nlol.rick: rickroll someone XD"
+        "message\n" + "lol.joke: you'll see\nlol.rick: rickroll someone XD\n" + "doom shareware: gives you the doomshare :thumbsup:\n"
     if (command === "ping" && message.content.startsWith(prefix)) {
         const timeTaken = Date.now() - message.createdTimestamp
         message.reply(`Pong! This message had a latency of ${timeTaken}ms.`)
@@ -24,6 +24,9 @@ client.on("messageCreate", function (message) {
     }
     if (command === "deez" && message.content.startsWith(prefix)) {
         message.channel.send("nuts")
+    }
+    if (command === "doom shareware" && message.content.startsWith(prefix)) {
+        message.channel.send("http://www.doomworld.com/3ddownloads/ports/shareware_doom_iwad.zip")
     }
     if (command === "help" && message.content.startsWith(prefix)) {
         message.reply(help)
